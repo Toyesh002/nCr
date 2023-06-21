@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int fact(int num){
+    if(num==0){
+        return 1;
+    }
+    int ans=1;
+    for(int i=1;i<=num;i++){
+       ans=ans*i;
+    }
+    return ans;
+}
+
+int nCr(int a,int b){
+    int numerator=fact(a);
+    int denominator=fact(b)*fact(a-b);
+    
+    int ANS=numerator/denominator;
+    return ANS;
+}
+
+int main(){
+    int a,b;
+    cin>>a>>b;
+    
+int ans =nCr(a,b);
+cout<<ans;
+
+}
